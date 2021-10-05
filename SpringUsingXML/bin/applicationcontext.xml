@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.2.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+	<bean id="address" class="com.seed.beans.Address">
+		<property name="street" value="paud road" />
+		<property name="city" value="pune" />
+		<property name="country" value="india" />
+	</bean>
+
+	<bean id="birthDate" class="com.seed.beans.BirthDate">
+		<property name="dd" value="01" />
+		<property name="mm" value="03" />
+		<property name="yy" value="2000" />
+	</bean>
+
+	<bean id="joinDate" class="com.seed.beans.JoinDate">
+		<property name="dd" value="01" />
+		<property name="mm" value="03" />
+		<property name="yy" value="2015" />
+	</bean>
+
+	<!-- <bean id="address1" class="com.seed.beans.Address">
+		<constructor-arg name="street" value="karve" />
+		<constructor-arg name="city" value="pune" />
+		<constructor-arg name="country" value="india" />
+	</bean>
+
+	<bean id="birthdate1" class="com.seed.beans.BirthDate">
+		<constructor-arg name="dd" value="01" />
+		<constructor-arg name="mm" value="03" />
+		<constructor-arg name="yy" value="2001" />
+	</bean>
+
+	<bean id="joindate1" class="com.seed.beans.JoinDate">
+		<constructor-arg name="dd" value="01" />
+		<constructor-arg name="mm" value="03" />
+		<constructor-arg name="yy" value="2016" />
+	</bean>
+
+ -->
+	<bean id="employee" class="com.seed.beans.Employee" autowire="byName">
+		<property name="empID" value="101" />
+		<property name="empName" value="Vimal" />
+	  
+	</bean>
+
+	<bean id="employee2" class="com.seed.beans.Employee" autowire="constructor">
+		<constructor-arg name="empID" value="102" />
+		<constructor-arg name="empName" value="Akshay" />
+	</bean>
+
+	<!-- <bean id="employee3" class="com.seed.beans.Employee" autowire="byType">
+		<constructor-arg name="empID" value="103" />
+		<constructor-arg name="empName" value="Raj" />
+	</bean> -->
+</beans>
