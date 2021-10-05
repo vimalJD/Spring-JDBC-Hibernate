@@ -18,7 +18,7 @@ public class SpringJDBCConfiguration {
 		dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
 		dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:oracle12c102");
 		dataSource.setUsername("system");
-		dataSource.setPassword("vimal6040");
+		dataSource.setPassword("**********");
 		return dataSource;
 
 	}
