@@ -14,7 +14,7 @@ public class Appmain {
 		  /* AbstractApplicationContext context = new AnnotationConfigApplicationContext(EmployeeConfig.class);
 	        Employee bean = (Employee) context.getBean("employeeBean");
 	        bean.setEmployeeId(444);
-	        bean.setName("jayshree");
+	        bean.setName("vimal");
 	        System.out.println(bean);
 	        context.close();*/
 		
